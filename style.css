@@ -1,0 +1,154 @@
+/* Pink Ombré Background */
+body {
+  background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
+  text-align: center;
+  font-family: 'Slab Serif', serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Countdown Title */
+#anniversaryTitle {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Countdown Timer */
+#countdown {
+  font-size: 28px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  display: inline-block;
+}
+
+/* Gift Box */
+#giftBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: red;
+  color: white;
+  padding: 40px; /* Increased padding for a bigger box */
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+/* Valentine's Pop-up */
+#valentinePopup {
+  position: relative;
+  background: white;
+  color: red;
+  padding: 50px; /* Increased padding for a bigger box */
+  font-size: 32px; /* Increased font size */
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  z-index: 1000; /* Ensure it comes forward */
+  border: 5px solid white; /* White rounded border */
+  width: 80%; /* Make it big */
+  max-width: 600px; /* Ensure it doesn't get too big */
+  margin: 20px auto; /* Center below the pictures */
+  /* Removed fadeOut animation */
+}
+
+/* Hearts Animation */
+#heartsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* Adjusted height to fit more hearts without making the page too long */
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 40px; /* Increased font size for bigger hearts */
+  color: red;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+
+/* Additional hearts for more on the screen */
+.heart:nth-child(2n) {
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.heart:nth-child(3n) {
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.heart:nth-child(4n) {
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.heart:nth-child(5n) {
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 30%;
+  max-height: 50%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides img {
+  width: 100%;
+  height: 300px; /* Set a fixed height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: red; /* Changed to red */
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Slab Serif', serif;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* 140 Reasons Box */
+.reasons-box {
+  background: white;
+  padding: 40px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 10px;
+  text-align: center;
+}
+
